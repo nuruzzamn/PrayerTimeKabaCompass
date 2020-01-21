@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#4CAF50"
+    tools:context=".PrayerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_compass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_design">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="422dp"
+            android:layout_height="235dp"
+            android:src="@drawable/mocca"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@+id/imageView">
+
+            <LinearLayout
+                android:layout_width="407dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/locationImageIcon"
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <TextView
+                    android:id="@+id/location_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="-49dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date_id"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textColor="#FFFF"
+                android:textSize="25dp"
+                android:textStyle="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tapmatra_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="125dp"
+                    android:fontFamily="@font/solaimanlipi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/temparature_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/degree_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="389dp"
+            android:layout_height="425dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/layout"
+            android:background="@drawable/gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/actv"
+                            android:layout_width="293dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center"
+                            android:textColor="#FFFF"
+                            android:textColorHint="#000000"
+                            android:tooltipText="#000000"
+                            android:textColorHighlight="#9200130A"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/img"
+                            android:layout_width="57dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/actv"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="-1dp"
+                            android:src="@drawable/arrow"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="66dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="317dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/buttonshape"
+                        android:fontFamily="serif"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:text="ok"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#27ECF0E7">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="18dp"
+                        android:background="#03A9F4"
+                        android:fontFamily="@font/solaimanlipi"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="ফজর    "
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="-2dp"
+                        android:src="@drawable/fojor" />
+
+                    <TextView
+                        android:id="@+id/fozor_id"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="#11A56E60"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="00:00 "
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="#27ECF0E7">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="18dp"
+                        android:background="#03A9F4"
+                        android:fontFamily="@font/solaimanlipi"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="যোহর   "
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="-1dp"
+                        android:src="@drawable/johor" />
+
+                    <TextView
+                        android:id="@+id/johor_id"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="#11A56E60"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="00:00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="#27ECF0E7">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="18dp"
+                        android:background="#03A9F4"
+                        android:fontFamily="@font/solaimanlipi"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="আসর   "
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/asor" />
+
+                    <TextView
+                        android:id="@+id/asor_id"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="#11A56E60"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="00:00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="#27ECF0E7">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="#03A9F4"
+                        android:fontFamily="@font/solaimanlipi"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="মাগরিব "
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="-3dp"
+                        android:src="@drawable/magrib" />
+
+                    <TextView
+                        android:id="@+id/magrib_id"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="#11A56E60"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="00:00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="#27ECF0E7">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="18dp"
+                        android:background="#03A9F4"
+                        android:fontFamily="@font/solaimanlipi"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text=" এশা    "
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/esha" />
+
+                    <TextView
+                        android:id="@+id/isha_id"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="#11A56E60"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="00:00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="#27ECF0E7">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="18dp"
+                        android:background="#03A9F4"
+                        android:fontFamily="@font/solaimanlipi"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="সূর্যোদয় "
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="57dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="-2dp"
+                        android:src="@drawable/sun" />
+
+                    <TextView
+                        android:id="@+id/surjoUdoy_id"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="#11A56E60"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="00:00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
